@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tab-content-container">
+        <div class="buttons">
+          <button onclick="showTab(0)">01 Graphics</button>
+          <button onclick="showTab(1)">02 Controls</button>
+          <button onclick="showTab(2)">03 Processor</button>
+          <button onclick="showTab(3)">04 Set up your play area</button>
+          <button onclick="showTab(4)">05 Gardian activity</button>
+          <button onclick="showTab(5)">06 Headset casting</button>
+        </div>
+        <div class="tabs">
+          <div id="tab-content-0">
+            <div class="left">
+              <h1>
+                EASY TO SET UP<br />
+                AND SAFE TO USE
+              </h1>
+              <img src="img/1.png" alt="Tab 1 Image" />
+            </div>
+            <img src="img/Line 1.png" alt="" />
+            <div class="right">
+              <h2>Graphics</h2>
+              <p>
+                With 1832 x 1920 pixels per eye, everything from multiplayer
+                games and productivity apps to 360 0 videos look beyond
+                incredible
+              </p>
+              <img src="img/video.png" alt="" />
+            </div>
+          </div>
+          <div class="hidden" id="tab-content-1">
+            <div class="left">
+              <h1>
+                EASY TO SET UP<br />
+                AND SAFE TO USE
+              </h1>
+              <img src="img/1.png" alt="Tab 1 Image" />
+            </div>
+            <img src="img/Line 1.png" alt="" />
+            <div class="right">
+              <h2>Graphics</h2>
+              <p>
+                With 1832 x 1920 pixels per eye, everything from multiplayer
+                games and productivity apps to 360 0 videos look beyond
+                incredible
+              </p>
+              <img src="img/video.png" alt="" />
+            </div>
+          </div>
+          <div class="hidden" id="tab-content-2">
+            <h1>
+              EASY TO SET UP<br />
+              AND SAFE TO USE
+            </h1>
+            <img
+              src="https://placehold.co/600x400?text=Tab+3+Image"
+              alt="Tab 3 Image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showTab(index) {
+        const contents = document.querySelectorAll('[id^="tab-content-"]');
+        contents.forEach((content, i) => {
+          content.classList.toggle("hidden", i !== index);
+        });
+      }
+    </script>
+  </body>
+</html>
